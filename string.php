@@ -1,5 +1,5 @@
 <?php
-
+// echo rand(1, 39)."\n";
 // 1. Write a PHP script to : -
 // a) transform a string all uppercase letters.
 // b) transform a string all lowercase letters.
@@ -27,6 +27,17 @@
 // 7. Write a PHP script to get the last three characters of a string.
 // Sample String : 'rayy@example.com'
 // Expected Output : 'com'
+//------------------------------------------
+// function getCharactorsFromLast($string) {
+//   $len = strlen($string);
+//   if($len<3) {
+//     return -1;
+//   } else if ($len == 3) {
+//     return $string;
+//   } else {
+//     return substr($string, -3);
+//   }
+// }	
 
 // 8. Write a PHP script to format values in currency style.
 // Sample values : value1 = 65.45, value2 = 104.35
@@ -35,6 +46,15 @@
 // 9. Write a PHP script to generate simple random password [do not use rand() function] from a given string.
 // Sample string : '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz'
 // Note : Password length may be 6, 7, 8 etc.
+//------------------------------------------
+// function generatePassword($ch) {
+//     $str = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz';
+//     $str = substr(str_shuffle($str), 0, $ch);
+//     return $str;
+//   }  
+//   echo generatePassword(6)
+
+
 
 // 10. Write a PHP script to replace the first 'the' of the following string with 'That'.
 // Sample date : 'the quick brown fox jumps over the lazy dog.'
@@ -72,6 +92,8 @@
 // Insert 'quick' between 'The' and 'brown'.
 // Expected Output : 'The quick brown fox'
 // Click me to the see solution
+//------------------------------------------
+// echo substr_replace($str, 'quick ', 4, 0)
 
 // 18. Write a PHP script to get the first word of a sentence.
 // Original String : 'The quick brown fox'
@@ -430,7 +452,11 @@
 // Test Data :
 // console.log(capitalizeWords('js string exercises'));
 // "JS STRING EXERCISES"
-
+//------------------------------------------
+// function capitalizeWords($str)
+// {
+//   return ucwords($str);
+// }
 
 // 42. Write a PHP function to uncapitalize each word in the string.
 // Test Data :

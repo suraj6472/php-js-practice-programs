@@ -1,3 +1,33 @@
+var var_x = 'hello'
+let let_x = 'hello'
+console.log('var before '+var_x)
+console.log('let before '+let_x)
+
+// fiirst
+// function x() {
+//     var var_x = 'hi'
+//     let let_x = 'hi'
+//     console.log('var mid '+var_x)
+//     console.log('let mid '+let_x)
+// }
+// x()
+
+if(1==1) {
+    // second
+    // var var_x = 'hi'
+    // let let_x = 'hi'
+    var_x = 'hi'
+    let_x = 'hi'
+    console.log('var mid '+var_x)
+    console.log('let mid '+let_x)
+}
+
+console.log('var after '+var_x)
+console.log('let after '+let_x)
+
+
+
+// console.log(Math.floor(Math.random() * 50))
 // 1. Write a Javascript to : -
 // a) transform a string all uppercase letters.
 // b) transform a string all lowercase letters.
@@ -17,6 +47,9 @@
 // 5. Write a Javascript to extract the file name from the following string.
 // Sample String : 'www.example.com/public_html/index.php'
 // Expected Output : 'index.php'
+//------------------------------------------------
+// let str = 'www.example.com/public_html/index.php'
+// console.log(str.substr(str.lastIndexOf('/')+1))
 
 // 6. Write a Javascript to extract the user name from the following email ID.
 // Sample String : 'rayy@example.com'
@@ -384,6 +417,9 @@
 // Test Data :
 // console.log(strip_html_tags('<p><strong><em>PHP Exercises</em></strong></p>'));
 // "PHP Exercises"
+//------------------------------------------
+// var str = '<p><strong><em>PHP Exercises</em></strong></p>'
+// str.replace(/<[^>]*>/g, "")
 
 
 // 36. Write a JavaScript function to create a Zerofilled value with optional +, - sign.

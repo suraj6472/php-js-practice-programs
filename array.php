@@ -1,4 +1,5 @@
 <?php
+// echo rand(1, 50)."\n";
 // 1. Write a PHP function to check whether an `input` is an array or not.
 // Test Data :
 // console.log(is_array('w3resource'));
@@ -47,9 +48,27 @@
 // "Red,Green,White,Black"
 // "Red,Green,White,Black"
 // "Red+Green+White+Black"
+//------------------------------------------	
+// function joinArrELements($arr, $delimiter=',') {
+//     return implode($delimiter, $arr);
+//   }
+  
+//   echo joinArrELements(["Red", "Green", "White", "Black"], '+');
 
 
 // 6. Write a PHP program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
+//------------------------------------------
+// $num = (string) $num;
+// $result = '';
+// for($i=0; $i<strlen($num)-1; $i++) {
+//   if($num[$i] % 2 == 0 && $num[$i+1] % 2 == 0) {
+//     $result .=$num[$i]."-";
+//   } else {
+//     $result .=$num[$i];
+//   }
+// }
+// $result .=$num[$i];
+// echo $result;
 
 
 // 7. Write a PHP program to sort the items of an array.
@@ -60,6 +79,24 @@
 // 8. Write a PHP program to find the most frequent item of an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
+//------------------------------------------
+// $mf = 0;
+// $occurence = 0;
+// $item = null;
+// foreach($arr1 as $key=>$a) {
+//   for($i=$key; $i<count($arr1); $i++) {
+//     if($a == $arr1[$i]) {
+//       $occurence++;
+//     }
+    
+//     if($mf < $occurence) {
+//       $mf = $occurence;
+//       $item = $a;
+//     }
+//   }
+//   $occurence = 0;
+// }
+// echo $item;
 
 
 // 9. Write a PHP program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
@@ -232,12 +269,35 @@
 // arr = [2, 5, 9, 6];
 // console.log(contains(arr, 5));
 // [True]
+//------------------------------------------	
+// function contains($arr, $el) {
+//   return in_array($el, $arr);
+// }
 
 
 // 33. Write a PHP script to empty an array keeping the original.
 
 // 34. Write a PHP function to get nth largest element from an unsorted array.
-
+// solution 34:
+// function getNthLargestElement($arr, $nth_largest_element)
+// {
+//     if (count($arr) < $nth_largest_element) return "Invalid parameters";
+//     $is_sorted = false;
+//     $arr_length = count($arr);
+//     while (!$is_sorted) {
+//         $is_sorted = true;
+//         for ($i = 0; $i < $arr_length - 1; $i++) {
+//             if ($arr[$i] > $arr[$i + 1]) {
+//                 $temp = $arr[$i];
+//                 $arr[$i] = $arr[$i + 1];
+//                 $arr[$i + 1] = $temp;
+//                 $is_sorted = false;
+//             }
+//         }
+//     }
+//     return $arr[count($arr) - $nth_largest_element];
+// }
+// echo getNthLargestElement([2, 16, 4, 5, 6, 7, 8, 12, 45], 22)."\n";
 // Test Data :
 // console.log(nthlargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4));
 // 89

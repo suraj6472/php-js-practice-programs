@@ -1,3 +1,4 @@
+// console.log(Math.floor(Math.random() * 50))
 // 1. Write a JavaScript function to check whether an `input` is an array or not.
 // Test Data :
 // console.log(is_array('w3resource'));
@@ -13,6 +14,11 @@
 // console.log(array_Clone([1, 2, [4, 0]]));
 // [1, 2, 4, 0]
 // [1, 2, [4, 0]]
+//------------------------------------------------
+// let arr = [1, 2, [4, 0]]; 
+// function array_Clone(arr) {
+//   return [...arr]
+// }
 
 
 // 3. Write a JavaScript function to get the first element of an array. Passing a parameter 'n' will return the first 'n' elements of the array.
@@ -60,10 +66,44 @@
 // 8. Write a JavaScript program to find the most frequent item of an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
+//------------------------------------------------
+// function findMostFrequent(arr) {
+//     let mf = 0;
+//     let occrance = 0;
+//     let item = null;
+//     for (var i = 0; i < arr1.length; i++) {
+//       for (var j = i; j < arr1.length; j++) {
+//         if(arr1[i] == arr1[j]) {
+//           occrance++;
+//         }
+//         if(occrance > mf) {
+//           mf = occrance
+//           item = arr1[i]
+//         }
+//       }
+//       occrance=0
+//     }
+//     return item;
+//   }
 
 
 // 9. Write a JavaScript program which accept a string as input and swap the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
-
+//------------------------------------------------
+// let upperCaseChars = new Array(26).fill(1).map((val, index) => String.fromCharCode(65+index));
+// let lowerCaseChars = new Array(26).fill(1).map((val, index) => String.fromCharCode(97+index));
+// let str = 'The Quick Brown Fox';
+// let result = '';
+// for(let i=0; i<str.length; i++) {
+//    let char = str[i];
+//    if(upperCaseChars.includes(char)){
+//      result+=lowerCaseChars[upperCaseChars.indexOf(char)];
+//    } else if (lowerCaseChars.includes(char)) {
+//      result+=upperCaseChars[lowerCaseChars.indexOf(char)];
+//    } else {
+//      result+=char;
+//    }
+// }
+// console.log(result)
 
 // 10. Write a JavaScript program which prints the elements of the following array.
 // Note : Use nested for loops.
@@ -117,6 +157,18 @@
 // Expected Output :
 // console.log(binary_Search(items, 1)); //0
 // console.log(binary_Search(items, 5)); //4
+//------------------------------------------------
+// function binarySearch(arr, el) {
+//     if (arr.length == 0) return -1;
+//     return  binary_Search(arr, el, 0, arr.length-1)
+//   }
+//   function binary_Search(arr, el, start, end) {
+//     mid = Math.floor(start+(end-start)/2)
+//     if(el > arr[mid]) binary_Search(arr, el, mid+1, end)
+//     if(el < arr[mid]) binary_Search(arr, el, start, mid)
+//     if(el == arr[mid]) return mid;
+//   }
+//   console.log(binarySearch(items, 5))
 
 
 // 19. There are two arrays with individual values, write a JavaScript program to compute the sum of each individual index value from the given arrays.
@@ -540,6 +592,13 @@
 // Note : Use array_udiff() function.
 
 // 46. Write a Javascript function to check whether all array values are strings or not.Go to the editor
+// solution 46
+// function isAllElementString(arr) {
+//     let non_string_els = arr.filter((a) => !(typeof a === 'string'))
+//     return non_string_els.length==0 ? true : false;
+// }
+
+// console.log(isAllElementString([1,'ZZZ','4','sfsd']));
 
 // 47. Write a Javascript function to get an array with the first key and value.Go to the editor
 
